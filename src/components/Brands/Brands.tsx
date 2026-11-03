@@ -4,7 +4,7 @@ import logoMarcas from '../../assets/logo-navegacao.png'
 
 function Brands() {
   return (
-    <section className="brands" aria-labelledby="brands-title">
+    <section id="marcas" className="brands" aria-labelledby="brands-title">
       <h2 id="brands-title" className="brands__title">
         Navegue por marcas
       </h2>
