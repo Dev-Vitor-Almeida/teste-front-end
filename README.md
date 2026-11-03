@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+# Teste Front-End Júnior — Econverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como parte do processo seletivo para a vaga de **Estagiário Front-End Júnior - Econverse**.
 
-Currently, two official plugins are available:
+A aplicação reproduz uma página de e-commerce com vitrine de produtos, categorias, banners promocionais, marcas e rodapé.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias utilizadas
 
-## React Compiler
+- React
+- TypeScript
+- Vite
+- Sass (SCSS)
+- HTML5
+- CSS3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Layout responsivo para diferentes tamanhos de tela.
+- Exibição de produtos consumidos por meio de uma API.
+- Navegação horizontal entre os produtos.
+- Modal com detalhes do produto selecionado.
+- Controle de quantidade de produtos no modal.
+- Seleção visual de categorias.
+- Seções promocionais e navegação por marcas.
+- Formulário de inscrição na newsletter.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Como executar o projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. Clone o repositório
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/Dev-Vitor-Almeida/teste-front-end.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Acesse a pasta do projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd teste-front-end
 ```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Execute o projeto
+
+```bash
+npm run dev
+```
+
+O Vite disponibilizará um endereço local no terminal. Acesse esse endereço pelo navegador para visualizar a aplicação.
+
+## Build de produção
+
+Para gerar os arquivos otimizados para produção, execute:
+
+```bash
+npm run build
+```
+
+Os arquivos gerados ficarão disponíveis na pasta `dist`.
+
+## API
+
+Os produtos são carregados a partir da API disponibilizada:
+
+```text
+https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json
+```
+
+Durante o desenvolvimento, foi utilizado um proxy configurado no Vite para realizar as requisições à API.
+
+## Autor
+
+**Vitor Almeida da Silva**
+
+[GitHub — Dev-Vitor-Almeida](https://github.com/Dev-Vitor-Almeida)
