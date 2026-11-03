@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './Categories.scss'
 
-import tecnologia from '../../assets/icons/tecnologia.svg'
+import tecnologia from '../../assets/icons/tecnologia.png'
 import supermercado from '../../assets/icons/supermercado.svg'
 import bebidas from '../../assets/icons/bebidas.svg'
 import ferramentas from '../../assets/icons/ferramentas.svg'

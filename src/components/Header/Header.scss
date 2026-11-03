@@ -3,14 +3,15 @@
   width: 100%;
   background-color: #fff;
 
-  &__benefits {
-    max-width: 1280px;
-    height: 32px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+ &__benefits {
+  max-width: 850px;
+  height: 32px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
   &__benefit {
     display: flex;
@@ -40,9 +41,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
   }
 
   &__logo {
+    flex-shrink: 0;
     font-size: 25px;
     font-weight: 700;
     letter-spacing: -1.5px;
@@ -54,17 +57,20 @@
   }
 
   &__search {
-    width: 630px;
+    flex: 1;
+    max-width: 630px;
     height: 48px;
     display: flex;
     align-items: center;
     background-color: #f6f5f2;
+    border-radius: 10px;
+    overflow: hidden;
 
     input {
       flex: 1;
       min-width: 0;
       height: 100%;
-      padding: 0 16px;
+      padding: 0 20px;
       border: none;
       outline: none;
       background: transparent;
@@ -79,8 +85,9 @@
     button {
       width: 52px;
       height: 48px;
+      flex-shrink: 0;
       border: none;
-      background-color: #3442b5;
+      background: transparent;
       display: grid;
       place-items: center;
 
@@ -88,7 +95,7 @@
         width: 24px;
         height: 24px;
         fill: none;
-        stroke: #fff;
+        stroke: #9f9f9f;
         stroke-width: 2;
         stroke-linecap: round;
       }
@@ -96,24 +103,24 @@
   }
 
   &__actions {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 24px;
 
     button {
-      width: 32px;
+      width: 25px;
       height: 32px;
       padding: 0;
       border: none;
       background: transparent;
       color: #9f9f9f;
-      font-size: 32px;
       display: grid;
       place-items: center;
 
       svg {
-        width: 26px;
-        height: 26px;
+        width: 25px;
+        height: 25px;
         fill: none;
         stroke: currentColor;
         stroke-width: 1.5;
@@ -133,14 +140,23 @@
     justify-content: space-between;
 
     a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       font-size: 12px;
       font-weight: 600;
       color: #3b3b3b;
       white-space: nowrap;
-    }
+      outline: none;
 
-    .header__nav-highlight {
-      color: #3019b2;
+      &.header__nav-link--active {
+        color: #3019b2;
+        font-weight: 700;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

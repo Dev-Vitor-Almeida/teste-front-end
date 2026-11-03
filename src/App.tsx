@@ -2,6 +2,9 @@
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Categories from './components/Categories/Categories'
+import Products from './components/Products/Products'
+import PartnerBanners from './components/PartnerBanners/PartnerBanners'
+import Brands from './components/Brands/Brands'
 import './App.scss'
 
 function App() {
@@ -11,27 +14,22 @@ function App() {
 
       <main>
         <Hero />
+
         <Categories />
 
-        <section id="categorias" aria-label="Categorias">
-          {/* Categorias */}
-        </section>
-
         <section id="vitrine-1" aria-label="Produtos relacionados">
-          {/* Primeira vitrine de produtos */}
+          <Products />
         </section>
 
-        <section id="banner-parceiros" aria-label="Marcas parceiras">
-          {/* Banner de parceiros */}
+        <PartnerBanners variant="first" />
+
+        <section id="vitrine-2"                          className="products-section--second"        aria-label="Produtos relacionados">
+          <Products variant="all" />
         </section>
 
-        <section id="vitrine-2" aria-label="Mais produtos">
-          {/* Segunda vitrine de produtos */}
-        </section>
+        <PartnerBanners variant="second" />
 
-        <section id="marcas" aria-label="Marcas">
-          {/* Marcas parceiras */}
-        </section>
+        <Brands />
 
         <section id="vitrine-3" aria-label="Ofertas">
           {/* Terceira vitrine de produtos */}
@@ -50,4 +48,3 @@ function App() {
 }
 
 export default App
-
