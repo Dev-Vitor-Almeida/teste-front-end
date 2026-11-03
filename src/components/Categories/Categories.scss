@@ -63,3 +63,39 @@
     white-space: nowrap;
   }
 }
+
+@media (max-width: 900px) {
+  .categories {
+    padding: 30px 20px 0;
+
+    &__list {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .categories {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px 10px;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__icon {
+      width: 88px;
+      height: 88px;
+    }
+
+    &__name {
+      font-size: 12px;
+      white-space: normal;
+    }
+  }
+}
